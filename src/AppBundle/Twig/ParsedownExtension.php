@@ -13,6 +13,10 @@ class ParsedownExtension extends \Twig_Extension
 
     public function parsedownFilter($text)
     {
-        return $text;
+
+        $parsedown = new \Parsedown();
+        $parsedText = $parsedown->text($text);
+
+        return $parsedText;
     }
 }

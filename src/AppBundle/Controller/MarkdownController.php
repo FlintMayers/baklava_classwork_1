@@ -44,14 +44,14 @@ class MarkdownController extends Controller
 
 
 //          logic moved to twig custom filter
-            $converter = $this->get('app.markdown');
-            $parsedText = $converter->convert($comment);
+//            $converter = $this->get('app.markdown');
+//            $parsedText = $converter->convert($comment);
         }
 
 
         return $this->render('markdown/index.html.twig', [
             'form' => $form->createView(),
-            'parsedText' => $parsedText,
+            'parsedText' => $comment,
         ]);
     }
 }

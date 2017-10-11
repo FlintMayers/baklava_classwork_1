@@ -6,6 +6,6 @@
         {{ form_widget(form) }}
         {{ form_end(form) }}
 
-        {{ parsedText | raw }}
+        {{ parsedText | parsedown | raw }}
     </div>
 {% endblock %}
